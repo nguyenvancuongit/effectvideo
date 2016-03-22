@@ -53,7 +53,8 @@ public class MainActivity extends AppCompatActivity {
             String musicPath = ExternalStorageDirectoryPath + "/Android/CoLeTaNenDungLai.mp3";
 //            String cmd = "-i " + input + " -threads 10 -preset ultrafast -vf setpts=2*PTS -an " + output;
 //            String cmd = "-i " + input + " -threads 10 -preset ultrafast -vf setpts=0.5*PTS -an " + output;
-            String cmd = "-i " + musicPath + " -i " + input + " -codec copy -shortest " + output;
+//            String cmd = "-i " + musicPath + " -i " + input + " -codec copy -shortest " + output;
+            String cmd = "-i " + input + " -ss " + "2" /*second*/ + " -t " + "4" /*duration*/ + " -c copy " + output;
             Log.e(TAG, "command " + cmd);
             Log.e(TAG, "getLibraryFFmpegVersion " + ffmpeg.getLibraryFFmpegVersion());
             Log.e(TAG, "getDeviceFFmpegVersion " + ffmpeg.getDeviceFFmpegVersion());
